@@ -22,7 +22,7 @@ Despite these fixes, I still observed inconsistent speedups for certain function
 
 ![blob](../assets/static/image.png)
 
-To determine where the issue was, I started with the most basic debugging approach — adding print statements throughout the code to trace execution and data flow. This eventually led me to discover that the way node chunks were computed was problematic. Specifically:
+To determine where the issue was, I started with the most basic debugging approach — adding print statements throughout the code to trace the execution. This eventually led me to discover that the way node chunks were computed was problematic. Specifically:
 ```
 num_in_chunk = max(len(G) // n_jobs, 1)
 node_chunks = nxp.chunks(G, num_in_chunk)
@@ -31,7 +31,7 @@ This approach mistakenly passed the number of nodes per chunk as the number of c
 ```
 node_chunks = nxp.chunks(G, n_jobs)
 ```
-This correctly splits the graph into `n_jobs` balanced chunks. The correction is now being addressed in [PR#112](https://github.com/networkx/nx-parallel/pull/112).
+This correctly splits the graph into `n_jobs` balanced chunks. This correction has been merged from [PR#112](https://github.com/networkx/nx-parallel/pull/112).
 
 While these changes improved the state, we still observed fluctuations in speedups as the number of nodes increased. This prompted us to examine the internals of the functions being benchmarked. We discovered that a new copy of the graph was being created for each process when passed across cores—an inefficient use of memory, especially when the graph is only being read, not modified. 
 
@@ -72,7 +72,7 @@ In the approach discussed [here](https://github.com/akshitasure12/networkx-blogs
 
 ![hm](../assets/static/hm.png)
 
-These results confirmed that switching to a NumPy-based representation would lead to measurable speedups, so my mentors motivated me to propose a NumPy-backed `is_reachable` implementation in NetworkX (ref. [PR #8112](https://github.com/networkx/networkx/pull/8112)).
+These results confirmed that switching to a NumPy-based representation would lead to measurable speedups, so I was asked to add the NumPy-backed `is_reachable` implementation in NetworkX (ref. [PR #8112](https://github.com/networkx/networkx/pull/8112)).
 
 ## Contributions
 
