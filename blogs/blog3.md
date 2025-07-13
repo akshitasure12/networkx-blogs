@@ -1,11 +1,13 @@
-# Blog2
+# Blog3
 ## Week 5-6 (30th June to 13th July, 2025)
 
 This week was more of a reflection and refinement phase, where I handled detailed review comments and ensured my open pull requests were in good shape for merging.
 
 ## Previously Raised Pull requests
 
-1. In my last blog post, I had discussed adding separate implementations for the NumPy version and the pure Python version of `is_reachable()`. This week, we explored how to simplify the Python implementation without introducing extra dependencies like `is_path` or even numpy. Instead of iterating through the entire graph again to find two-hop neighbors, we revised the function to use a more direct check using the sucessors of the source node and predeccessors of the target.
+1. Simpler Python version for `is_reachable()`
+   
+   In my last blog post, I had discussed adding separate implementations for the NumPy version and the pure Python version of `is_reachable()`. This week, we explored how to simplify the Python implementation without introducing extra dependencies like `is_path` or even numpy. Instead of iterating through the entire graph again to find two-hop neighbors, we revised the function to use a more direct check using the sucessors of the source node and predeccessors of the target.
     ```python
     return {
         x for x in G if x == v or x in G[v] or any(z in G[v] for z in G.pred[x])
@@ -51,7 +53,7 @@ This week was more of a reflection and refinement phase, where I handled detaile
 
     Overall, these benchmarks show that while the Python implementation is way faster than it was, the NumPy-based approach remains more efficient for larger node counts. 
 
-2. Investigated the use of a global seed set in `improve_timing` 
+2. Investigated the use of a global seed set in `improve_timing`
 
     Initially, I was using `random.seed(42)` globally to set the seed once for the entire script. This worked for generating edge weights, but it didn’t control other random operations — for example, selecting random neighbors.
 
@@ -72,7 +74,7 @@ These were the major improvements and insights I focused on this week.
 ### Plan for the upcoming week:
 
 1. I’ve been reading through resources on writing clean, clear documentation as per the recommendations suggested, i.e [Real Python’s guide](https://realpython.com/documenting-python-code/) and [PEP 20 - The Zen of Python](https://peps.python.org/pep-0020/). Using these as a reference, I’m currently refining [PR#122](https://github.com/networkx/nx-parallel/pull/122) to align with best practices.
-2. Get a few of the ongoing pull requests reviewed and merged.
+2. Get a few of the ongoing pull requests merged.
 3. Work on new parallel implementations for:
     - `clustering`
     - `average_clustering`
