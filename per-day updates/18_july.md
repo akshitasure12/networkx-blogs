@@ -1,6 +1,9 @@
 ## 18th July
-### Made a new PR for harmonic centrality 
+**Total Combined hours : 6.5 hours**
+
+### Made a new PR for harmonic centrality
 **Duration: [1.5 hours]**
+**Associated PR**: [PR#124](https://github.com/networkx/nx-parallel/pull/124)
 
 1. Coding out the approach consistent with that of NetworkX.
 2. Optimise the approach for processing each chunk without using set intersection.
@@ -12,8 +15,9 @@
 
 End result: raised a PR but something to think about would be if the speed cannot be increased at all.
             
-### Work on should_run tests 
+### Work on `should_run` tests 
 **Duration [1.5 hr]**
+**Associated PR**: [PR#123](https://github.com/networkx/nx-parallel/pull/123)
     
 1. Spent time looking back at the flow of `should_run`
 2. checked `nx-cugraph` for references for tests
@@ -24,23 +28,27 @@ End result: I added the tests, will wait for a review to see if I am expected to
 
 ### Improve make `n_jobs=-1` 
 **Duration [2 hrs]**
+**Associated PR**: [PR#122](https://github.com/networkx/nx-parallel/pull/122)
 
 1. Went through https://peps.python.org/pep-0020/
 2. Re-read [config.md](http://config.md) and [readme.md](http://readme.md) multiple times to get a grasp of the user perspective and made a few changes accordingly along with catering to mentors suggestions.
 
 End result: _Ready for review_
     
-### Started working on [Issue #8155](https://github.com/networkx/networkx/issues/8155)
+### Started working on splitting `is_reachable` benchmarks
 **Duration [0.5 hour]**
+**Associated Issue**: [Issue #8155](https://github.com/networkx/networkx/issues/8155)
 - Familiarised myself with connected components in tournament graphs.
 - Made a division of the benchmarks into 2 parts but I couldn't complete it today.
 
 ### Compare performance of `is_reachable` on nx_parallel and NetworkX
 **Duration [1 hour]**
+**Associated PR**: [PR#119](https://github.com/networkx/nx-parallel/pull/119)
+
 - Added networkx backend to the asv benchmarks to compare.
 - Constantly ran into a numpy import error.
 
-    a. I tried adding numpy as a dependency into pyproject.toml assuming that would work but I'm not sure if thats the right way to go about it.
+    a. I tried adding numpy as a dependency into `pyproject.toml` assuming that would work but I'm not sure if thats the right way to go about it. 
 
 ### Note for mentors:
 - [PR#117](https://github.com/networkx/nx-parallel/pull/117), [PR#106](https://github.com/networkx/nx-parallel/pull/106) are both ready from my end.
