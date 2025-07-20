@@ -52,7 +52,7 @@ End Result:
 3. Re-ran benchmarks for [PR#119](https://github.com/networkx/nx-parallel/pull/119) to verify the previously obtained results,  documented the result and updated information in the respective PR.
 
 ### Note for mentors:
-PRs ready for review:
+PRs ready for review: </br>
 In nx-parallel:
 - [PR#106](https://github.com/networkx/nx-parallel/pull/106)
 - [PR#117](https://github.com/networkx/nx-parallel/pull/117)
