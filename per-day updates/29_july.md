@@ -3,7 +3,7 @@
 
 ### Adding a clustering functionality
 **Duration: [4 hours]** </br>
-**Associated PR: [PR#130](https://github.com/networkx/nx-parallel/pull/130)
+**Associated PR: [PR#130](https://github.com/networkx/nx-parallel/pull/130)**
 
 1. Finalised the algorithm implementation and timed it.
     - The results of this equalled the time taken by the sequential implementation, no matter how many workers I added.
