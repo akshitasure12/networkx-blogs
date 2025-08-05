@@ -23,18 +23,21 @@
     (No success)
 8. Try out mem-mapping for speedups : 
     - https://joblib.readthedocs.io/en/latest/parallel.html
-    - errors fixed: returning numpy-scalars, assertion errors regarding nodes and their label mismatch
+    - errors fixed: 
+        - returning numpy-scalars
+        - assertion errors regarding nodes and their label mismatch
+        - too many values to unpack error
     (No speedups encountered as such)
-    - too mnay values to unpack error
-9. Investing why Timing script giving unreasonable 1.5x speedup for sequential vs paralle code with `n_jobs=1`
+9. Investing why timing script giving unreasonable 1.5x speedup for sequential vs paralle code with `n_jobs=1`
     - returning a list is faster than consuming a generator function into a list?
+    - I couldn't make much sense out of this
 
 End Result: No approach paved a way to assure speedups for colliders.
 
 ### Additional Work:
 **Duration: [1.5 hours]** </br>
 
-1. Understand approach in https://github.com/networkx/networkx/pull/8167 that implements seperate benchmarks for `is_reachable()` to check if there are any comments I can help with?
+1. Understand approach in https://github.com/networkx/networkx/pull/8167 that implements seperate benchmarks for `is_reachable()` to check I can add any comments w.r.t the implementation.
 2. Experiment ways to implement `test_get_chunks` in a general way instead of adding multiple if-else statements.
     - I think splitting into seperate tests instead of a monolithic one would be better..
 3. Went through all the previous PRs to check if there could be any potential improvements or any comments that are yet to be accomodated.
