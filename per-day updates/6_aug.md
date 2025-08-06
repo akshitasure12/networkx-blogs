@@ -20,7 +20,6 @@ End Result: Raised [PR#134](https://github.com/networkx/nx-parallel/pull/134/)
 **Associated PR: [PR#130](https://github.com/networkx/nx-parallel/pull/130)**
 
 1. Added `average_clustering` to use `nxp.clustering`.
-2. Ran into a few rebase errors while took some time to debug.
-3. Tried running the benchmark script but the problem of taking up too much time for timing clustering algorithm persisted- heatmap wsn't obtained
-    - I ran it for 45 mins but it was still stuck up at 800 nodes with edge_prob = 1
+2. Ran into a few rebase errors which took some time to debug.
+3. I attempted to run the benchmark script, but the clustering algorithm continued to take an excessive amount of time — the heatmap couldn't be generated. Even after running it for 45 minutes, it remained stuck at 800 nodes with edge_prob = 1.
 4. Added asv benchmarks.
