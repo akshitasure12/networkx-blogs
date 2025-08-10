@@ -1,6 +1,10 @@
 # Blog4
 ## Week 9-10 (28th July to 10th Aug, 2025)
 
+### Abstract
+
+In weeks 9 and 10 of my coding phase, I focused on centralizing the `should_run` logic to reduce redundancy and streamline the decision of when to skip parallel execution. I also implemented and benchmarked several graph algorithms (`clustering`, `average_clustering`, `average_neighbor_degree`, `v_structures`, and `colliders`) to explore their parallel performance. While some algorithms achieved moderate speedups, others suffered from overheads that negated parallel benefits, reinforcing the need for the centralized `should_run` checks. Additionally, I enhanced testing utilities to support new algorithms with diverse behaviors, extending the test suite. 
+
 ### 1. Centralising `should_run`
 
 In the previous implementation of the `should_run` function, each algorithm had its own `should_run` logic defined. In most cases, the logic was identical, leading to redundant code. To address this, I worked on centralizing the `should_run` logic this week in [PR #123](https://github.com/networkx/nx-parallel/pull/123).
