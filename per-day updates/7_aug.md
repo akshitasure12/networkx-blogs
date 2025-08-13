@@ -3,7 +3,7 @@
 
 ### Got an idea to implement `_apply_pred`
 **Duration: [1 hour]** </br>
-**Associated PR: [PR#134](https://github.com/networkx/nx-parallel/pull/129)**
+**Associated PR: [PR#129](https://github.com/networkx/nx-parallel/pull/129)**
 
 1. Running `_apply_pred` using generators alone.
 2. Tried fixing "UserWarning: 16 tasks which were still being processed by the workers have been cancelled. You could benefit from adjusting the input task iterator to limit unnecessary computation time."

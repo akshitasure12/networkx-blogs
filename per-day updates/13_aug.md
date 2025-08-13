@@ -1,5 +1,5 @@
 ## 13th Aug
-**Total Combined hours : 4.45 hours**
+**Total Combined hours : 5.45 hours**
 
 ### improve timing
 **Duration: [45 mins]** </br>
@@ -26,6 +26,16 @@
     - Brainstormed different ways to add tests.
     - WIP: adding a single test for each `should_run_policy` function.
 
+### Handle PR review comments and updates
+**Duration: [1 hour]** </br>
+
+End Result: 
+- Got Merged **Associated PR: [PR#129](https://github.com/networkx/nx-parallel/pull/129)**
+- Got Approved 
+    - **Associated PR: [PR#127](https://github.com/networkx/nx-parallel/pull/127)**
+    - **Associated PR: [PR#114](https://github.com/networkx/nx-parallel/pull/114)**
+- Rebased recent merged PR to [PR#127](https://github.com/networkx/nx-parallel/pull/127), which is now ready.
+- Minor edits in [PR#106](https://github.com/networkx/nx-parallel/pull/106).
 
 I’ve been a bit sick so I haven't been at my productive best so far. I’ll make it up over the week. Thank you for understanding :)
 
