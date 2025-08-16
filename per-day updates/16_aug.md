@@ -3,9 +3,9 @@
 
 ### `should_run` functionality
 
-1. Simplified exports.
-2. Solved the circular import situation.
-3. Small naming fixes.
+1. Simplified exports
+2. Solved the circular import error
+3. Naming fixes
 
 ### `harmonic_centrality` 
 
@@ -21,4 +21,4 @@
 1. Re-ran a lot of heatmaps
 2. Updated PRs with the latest heatmaps.
 
-A lot of time went into refining the PRs and making the minor fixes needed to get them ready for merging-- there was a bit of back and forth, but it was insightful :)
+There was a bit of back and forth between PRs, but it was insightful :)
