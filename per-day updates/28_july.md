@@ -3,7 +3,7 @@
 
 ### Adding a centralised `should_run` functionality
 **Duration: [3 hours]** </br>
-**Associated PR: [PR#123](https://github.com/networkx/nx-parallel/pull/123)
+**Associated PR: [PR#123](https://github.com/networkx/nx-parallel/pull/123)**
 
 1. Added 2 helpers for `should_run` that each function's individual `_should_run` could call these.
 2. But the redundancy problem was still prevalent. So, this approach had to be rejected.
@@ -16,7 +16,7 @@ End Result: Updated [PR#123](https://github.com/networkx/nx-parallel/pull/123) t
 
 ### Finalise `is_reachable()` 
 **Duration: [2 hours]** </br>
-**Associated PR: [PR#119](https://github.com/networkx/nx-parallel/pull/119)
+**Associated PR: [PR#119](https://github.com/networkx/nx-parallel/pull/119)**
 
 1. test sequential against pure python implementation for speedups
     - speedups were not obtained (slow implementation)
@@ -33,7 +33,7 @@ End Result: In case of no other review comments, this PR would be ready.
 
 ### Addressed the review comments under `link_prediction.py`
 **Duration: [1.5 hours]** </br>
-**Associated PR: [PR#123](https://github.com/networkx/nx-parallel/pull/123)
+**Associated PR: [PR#123](https://github.com/networkx/nx-parallel/pull/123)**
 
 1. tried using return_as='generator'
 2. ran into errors like unable to raise nodeNotFound errors.
